@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/style.css">
+ 
+
+  <title>Project 12: Animated login and signup form</title> 
+</head>
+<body>
+    <!-- CONTAINER -->
+    <div class="container">
+
+      <!-- FORMS CONTAINER -->
+      <div class="forms_container">
+        <div class="signin_signup">
+          
+          <!-- SIGN IN FORM -->
+          <form class="sign_in-form">
+            <h2 class="title">ورود</h2>
+            <div class="input_field">
+              <i class="fa fa-user"></i>
+              <input type="text" placeholder="نام کاربری">
+            </div><!-- input_field -->
+            <div class="input_field">
+              <i class="fa fa-lock"></i>
+              <input type="password" placeholder="رمز عبور">
+            </div><!-- input_field -->
+
+            <input type="submit" value="وارد شوید" class="btn solid">
+
+            <p class="social_text">یا از طریق شبکه های اجتماعی وارد شوید!</p>
+            <div class="social_media">
+              <a href="#" class="social_icon">
+                <i class="fa fa-facebook"></i>
+              </a><!-- social_icon -->
+              <a href="#" class="social_icon">
+                <i class="fa fa-google"></i>
+              </a><!-- social_icon -->
+              <a href="#" class="social_icon">
+                <i class="fa fa-twitter"></i>
+              </a><!-- social_icon -->
+              <a href="#" class="social_icon">
+                <i class="fa fa-linkedin"></i>
+              </a><!-- social_icon -->
+            </div><!-- social-medial -->
+          </form><!-- sign_in-form -->
+
+          <!-- SIGN UP FORM -->
+          <form class="sign_up-form">
+            <h2 class="title">ثبت نام</h2>
+
+            <div class="input_field">
+              <i class="fa fa-user"></i>
+              <input type="text" placeholder="نام کاربری">
+            </div><!-- input_field -->
+
+            <div class="input_field">
+              <i class="fa fa-envelope"></i>
+              <input type="text" placeholder="ایمیل">
+            </div><!-- input_field -->
+
+            <div class="input_field">
+              <i class="fa fa-lock"></i>
+              <input type="password" placeholder="رمز عبور">
+            </div><!-- input_field -->
+
+            <input type="submit" value="ثبت نام" class="btn solid">
+
+            <p class="social_text">یا از طریق شبکه های اجتماعی وارد شوید!</p>
+            <div class="social_media">
+              <a href="#" class="social_icon">
+                <i class="fa fa-facebook"></i>
+              </a><!-- social_icon -->
+              <a href="#" class="social_icon">
+                <i class="fa fa-google"></i>
+              </a><!-- social_icon -->
+              <a href="#" class="social_icon">
+                <i class="fa fa-twitter"></i>
+              </a><!-- social_icon -->
+              <a href="#" class="social_icon">
+                <i class="fa fa-linkedin"></i>
+              </a><!-- social_icon -->
+            </div><!-- social-medial -->
+          </form><!-- sign_up-form -->
+
+        </div><!-- signin_signup -->
+      </div><!-- forms_container -->
+
+      <!-- PANELS CONTAINER -->
+      <div class="panels_container">
+        <!-- RIGHT PANEL -->
+        <div class="panel right_panel">
+          <div class="content">
+            <h3>از قبل ثبت نام کرده اید؟</h3>
+            <p>جهت ورود به سایت از طریق لینک زیر اقدام کنید</p>
+            <button id="sign_in-btn" class="btn transparent">ورود</button>
+          </div><!-- content -->
+          <img src="images/sing_in.svg" class="image" alt="sign in image">
+        </div><!-- panel right_panel -->
+
+        <!-- LEFT PANEL -->
+        <div class="panel left_panel">
+          <div class="content">
+            <h3>هنوز ثبت نام نکرده اید؟</h3>
+            <p>جهت ثبت نام در سایت از طریق لینک زیر اقدام کنید.</p>
+            <button id="sign_up-btn" class="btn transparent">ثبت نام</button>
+            <button id="sign_up-btn" class="btn transparent"> برگشت</button>
+          </div><!-- content -->
+          <img src="images/sing_up.svg" class="image" alt="sign up image">
+        </div><!-- panel left_panel -->
+      </div><!-- panels_container -->
+    </div><!-- container -->
+  
+
+   <script src="js/script.js"></script>
+</body>
+</html>

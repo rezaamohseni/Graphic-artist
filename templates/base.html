@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="fa" dir="rtl">
+<head>
+  <title>گرافیک سایت</title>
+  <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'assets//css/style.css' %}">
+</head>
+
+<body class="container border border-1">
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">ثبت سفارش</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">جهت ثبت سفارش شماره تماس خود و توضیحات لازم را بنویسید همکاران ما با شما تماس خواهند گرفت.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">نام ونام خانوادگی </label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">شماره تماس و سفارش مورد نظر </label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+        <button type="button" class="btn btn-primary">ارسال</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% block 'content' %}
+
+{% endblock 'content' %}
+
+<footer style="margin-top: 100vh;">
+    <div class="  text-center row">
+      <div class="col-lg-3  d-inline-block">
+        <h4>لیننک های سریع </h4>
+        <hr>
+        <a class="link-dark text-decoration-none" href="#"> صفحه اصلی </a><br>
+        <a class="link-dark text-decoration-none" href="#"> نمونه کار </a><br>
+        <a class="link-dark text-decoration-none" href="#"> خدمات </a><br>
+        <a class="link-dark text-decoration-none" href="#">همکاری با ما </a><br>
+      </div>
+      <div class="col-lg-3   d-inline-block">
+        <h4>لینک های محبوب </h4>
+        <hr>
+        <a class="link-dark text-decoration-none" href="#"> سوالات متدوال </a><br>
+        <a class="link-dark text-decoration-none" href="#"> ثبت سفارش </a><br>
+        <a class="link-dark text-decoration-none" href="#"> پیگیری سفارش </a><br>
+      </div>
+      <div class="col-lg-3  d-inline-block">
+        <h4>با ما در تماس باشید </h4>
+        <hr>نشانی :ایران،استان مرکزی ،شهرستان اراک،خیابان شهید شیرودی روبه روی انتقال خون،شرکت طراحی گرافیک<br>
+        تلفن تماس :00012345678
+      </div>
+    </div>
+  </footer>
+  {% comment %} <div class=" chat col-lg-4  m-3 position-fixed top-50 end-0 ">
+    <div>
+    </div>
+    <div><img src="{% static 'assets//img/chat.png' %}" class=" img_chat float-end   position-fixed bottom-0 end-0"></div> {% endcomment %}
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <script>const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)) </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+
+</html>

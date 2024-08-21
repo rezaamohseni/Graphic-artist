@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'yekan';
+    src: url('../font/Yekan.ttf');
+}
+*{
+    font-family: 'yekan';
+
+}
+ .login_img{
+     width: 25px ;
+     height: 25px ;
+ }
+
+ .login_1{
+     background-color: #F5F4F5 ;
+     height: 82px ;
+ }
+
+ .btn-login{
+  background-color:#F8CFA1;
+
+  border-radius: 10px ;
+ }
+ .btn-login-a{
+     color: #0A0000 ;
+     text-decoration:none ;
+ }
+.part1::before{
+    content: '';
+    background-image: url(../img/12.jpg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+.part1{
+    background-color: rgba(0, 0, 0, 0.288);
+    position: relative;
+    height:250px  ;
+     width:100%;
+      background-size: 100% 100% ;
+    background-repeat: no-repeat ;
+    position: relative;
+
+
+}
+
+
+
+.part1_img{
+    width:  30px ;
+    height: 30px ;
+}
+.logo {
+    height:80px ;
+    width: 100px ;
+}
+
+.text{
+    height: 200px;
+}
+
+.btn-search {
+    background-color:#F8CFA1  ;
+    color: #0A0000  ;
+}
+.carousel-inner{
+    height: 400px ;
+}
+
+.card_img{
+    height: 400px ;
+}
+
+ .fff{
+     height: 450px ;
+     opacity:0.3 ;
+ }
+
+ .oo{
+     background-image: linear-gradient(to bottom, #FFC2A0, #FFAFBB)    ;
+      height: 50px ;
+      /* border-radius: 20px ; */
+ }
+
+ .oo_1{
+     width: 65px ;
+     height: 65px ;
+ }
+  .chat{
+    min-height: 80%;
+      background-image: url(../img/z.PNG) !important ;
+  }
+
+ .img_chat{
+     width: 100px  ;
+     height: 100px  ;
+     z-index: 1000  ;
+
+ }
+
+   .blur{
+       background: rgba(235, 235, 235, 0.05) ;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) ;
+backdrop-filter: blur(6px) ;
+-webkit-backdrop-filter: blur(6px) ;
+   }
+  form2{
+      height:450px ;
+      background-image: url(../img/stylish-hexagonal-line-pattern-background_1017-19742.avif) ;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+
+
+ /**
+    ??????????????
+
+  **/
+    .box{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transition: all 0.2s ease-in;
+}
+.image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.2s ease-in;
+}
+.text-servic{
+font-size: 25px;
+background-color: #F8CFA1;
+
+
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.hover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.281);
+
+    z-index: 2;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    transform: rotateY(90deg);
+}
+.hoverContent{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.hoverContent .btn{
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.box:hover .hover{
+    transform: rotateY(0deg);
+}
+.box:hover .image{
+    transform: rotateY(90deg);
+}
+
+
+ /** ?? ????? ???? ????? ???? ????  **/
+
+
+
+
+ footer{
+       height: 450px ;
+     background-image: url(../img/ttt.PNG);
+    background-repeat: no-repeat ;
+    background-size: 100% 100% ;
+  /**  opacity: 0.6 ;   **/
+
+
+
+
+
+   }
+.oo{
+    background: linear-gradient(to right bottom,  #F8CFA1 49%, #fff 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+}
+
+
+
+
