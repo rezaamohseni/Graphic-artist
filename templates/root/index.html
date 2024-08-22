@@ -3,26 +3,7 @@
 {% load static %}
 {% block 'title' %}home{% endblock 'title' %}
 {% block 'content' %}
-  <div class="login_1">
-    <div class=" float-end m-1  d-inline-block"><a href="#"><img class="login_img"
-          src="{% static 'assets//img/instagram-logo-main-4.png' %}"></a></div>
-    <div class=" float-end m-1  d-inline-block"><a href="#"><img class="login_img"
-          src="{% static 'assets//img/مجموعه-لوگو-تلگرام-8.png' %}"></a></div>
-    <button class="btn-login border  d-inline-block float-end m-1"><a class="btn-login-a"
-        href=" 'assets//P12-animated login and signup form/index.html ">ورود به سایت</a> </button>
-    <div class=" float-start m-1  d-inline-block"> <img class="logo" src="{% static 'assets//img/logoooo.png' %}"> </div>
-  </div>
-  <nav dir="rtl" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-    <div class=" float-end m-1  d-inline-block"><a href="#"><img class="part1_img" src="{% static 'assets//img/shop.png' %}"></a></div>
-    <div class="float-end m-1 d-inline-block "><a href="#"><img class="part1_img" src="{% static 'assets//img/profile2.png' %}"></a>
-    </div>
-  </nav>
-  <div>
-    <div class="part1 col-lg-12  ">
 
-      <h1 class="text-center ">گرافیست سایت </h1><br>
-      <p class="text-center  captiontitle">اولین و بزرکترین سایت طراحی گرافیکی </p>
-    </div>
     <br>
     <nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky top-0 z-3">
       <div class="container-fluid">
@@ -40,23 +21,23 @@
               <a class="nav-link" href="#1">نمونه کار</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#3" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href={% url 'root:service' %} role="button" 
                 aria-expanded="false">
                 خدمات
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href='#'>عکاسی</a></li>
-                <li><a class="dropdown-item" href="service.html">طراحی لوگو و ارم</a></li>
-                <li><a class="dropdown-item" href="service.html">طراحی اسلایدر و بنر </a></li>
-                <li><a class="dropdown-item" href="service.html">طراحی گرافیکی سایت</a></li>
+                {% comment %} <li><a class="dropdown-item" href={% url 'root:service' %}>عکاسی</a></li>
+                <li><a class="dropdown-item" href={% url 'root:service' %}>طراحی لوگو و ارم</a></li>
+                <li><a class="dropdown-item" href={% url 'root:service' %}>طراحی اسلایدر و بنر </a></li>
+                <li><a class="dropdown-item" href={% url 'root:service' %}>طراحی گرافیکی سایت</a></li> {% endcomment %}
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="service.html">سایر موارد</a></li>
+                {% comment %} <li><a class="dropdown-item" href={% url 'root:service' %}>سایر موارد</a></li> {% endcomment %}
               </ul>
             </li>
             <li class="nav-item">
-              <a href="login.html" class="nav-link ">همکاری با ما </a>
+              <a href={% url 'root:home' %} class="nav-link ">همکاری با ما </a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -132,32 +113,23 @@
     <h3 id="1" class="text-center">نمونه کار های کارت ویزیت</h3>
   </div>
   <br><br>
-  <div id="product" class="card-group container owl-carousel owl-theme owl-rtl">
-    <div class="card m-2  col-md-5 blur item">
-      <img src="{% static 'assets//img/graaaa.jpg' %}" class="card-img-top card_img" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">نمونه کار کارت ویزیت</h5>
-        <p class="card-text">اینجا توضیحات لازم نوشته میشود.</p>
+
+
 
       </div>
     </div>
+  {% for card in  Business %}
 
     <div class="card m-2  col-md-5 blur item ">
-      <img src="{% static 'assets//img/gra55' %}" class="card-img-top card_img" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">نمونه کار کارت ویزیت</h5>
-        <p class="card-text">اینجا توضیحات لازم نوشته میشود </p>
+    <img src={{card.image.url}} class="card-img-top card_img" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">{{card.title}}</h5>
+      <p class="card-text">{{card.descriptions}}</p>
 
       </div>
     </div>
-    <div class="card m-2  col-md-5 blur item">
-      <img src="{% static 'assets//img/gra66.jpeg' %}" class="card-img-top card_img" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">نمونه کار کارت ویزیت</h5>
-        <p class="card-text">اینجا توضیحات لازم نوشته می شود.</p>
+    {% endfor %}
 
-      </div>
-    </div>
   </div>
   <br><br>
   <div class="oo">
@@ -165,31 +137,17 @@
     <h3 id="2" class="text-center ">نمونه کار عکاسی کودکان </h3>
   </div>
   <br> <br>
+  {% for portfolio in Portfolios_children %}
   <div class="card-group  container ">
     <div class="card m-2">
-      <img src="{% static 'assets//img/baby.jfif' %}" class="card-img-top card_img" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">عکاسی کودکان </h5>
-        <p class="card-text">اینجا توضیحات لازم می نویسیمbr><br>.</p>
+    <img src={{portfolio.image.url}} class="card-img-top card_img" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">{{portfolio.title}}</h5>
+      <p class="card-text">{{portfolio.descriptions}}</p>
       </div>
-
+{% endfor %}
     </div>
-    <div class="card m-2">
-      <img src="{% static 'assets//img/baby2.webp' %}" class="card-img-top card_img" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">عکاسی کوکان </h5>
-        <p class="card-text">اینجا توضیحات لازم می نویسیم </p>
-      </div>
 
-    </div>
-    <div class="card m-2">
-      <img src="{% static 'assets//img/baby3.jpg' %}" class="card-img-top card_img" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">عکاسی کوکان</h5>
-        <p class="card-text  ">اینجا توضیحات لازم   می نویسیم</p>
-      </div>
-
-    </div>
   </div>
   <br><br><br>
   <div class="oo">
@@ -198,6 +156,7 @@
   </div>
 
   <br>
+  {% for service in special %}
 
   <div class="container">
     <div class="row">
@@ -205,89 +164,25 @@
         <div class="box border border-1">
 
           <div class="image">
-            <div class="text-servic text-center ">عکاسی </div>
-            <img src="{% static 'assets//img/u.jpg' %}" alt="">
+            <div class="text-servic text-center ">{{service.title}} </div>
+            <img src={{service.image.url}} alt="">
           </div>
           <div class="hover">
             <div class="hoverContent">
               <a href="#" class="btn btn-primary">ثبت سفارش</a>
               <div>
-                <p>عکاسی شخصی و عکاسی صنعتی از محصولات شما برای بهتر دیده شدن در بین رغبا و فضای مجازی</p>
+                <p>{{service.descriptions}}</p>
               </div>
 
             </div>
           </div>
         </div>
       </div>
+{% endfor %}
 
-      <div class="col-lg-3  col-md-5 col-sm-12">
-        <div class="box border border-1">
-          <div class="image">
-            <div class="text-servic text-center ">طراحی لوگو و آرم </div>
-
-            <img src="{% static 'assets//img/lo.jpg' %}" alt="">
-          </div>
-          <div class="hover">
-            <div class="hoverContent">
-              <a href="" class="btn btn-primary">ثبت سفارش</a>
-              <div>
-                <p>طراحی هویت بصری و ایده پردازی برای طرح لوگو و برندینگ نام تجاری به صورت کامل همراه اوراق اداری و
-                  تمامی ملزومات </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-lg-3  col-md-5 col-sm-12">
-        <div class="box border border-1">
-          <div class="image">
-            <div class="text-servic text-center ">طراحی بنر و اسلایدر </div>
-
-            <img src="{% static 'assets//img/sl.jpg' %}" alt="">
-
-          </div>
-          <div class="hover">
-            <div class="hoverContent">
-              <a href=""  class="btn btn-primary">ثبت سفارش</a>
-              <div>
-                <p>طراحی اسلایدر و بنر سایت به صورت گرافیکی و طراحی بنر های تبلیغاتی برای شبکه های اجتماعی از جمله
-                  اینستاگرام</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-5 col-sm-12">
-        <div class="box border border-1">
-          <div class="image">
-            <div class="text-servic text-center ">طراحی سایت</div>
-
-            <img src="{% static 'assets//img/gr.jpg' %}" alt="">
-
-          </div>
-          <div class="hover">
-            <div class="hoverContent">
-              <a href="" class="btn btn-primary">ثبت سفارش </a>
-              <div>
-                <p>طراحی گرافیکی و منحصر به فرد سایت طراحی ظاهری سایت و طراحی کاربردی متناسب با آخرین متد های طراحی جهان
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <br><br><br> <br><br><br><br>
   <div class="part2 ">
+    <br><br><br> <br><br>
     <ul class="nav nav-tabs ">
-
-
       <li class="nav-itam"><a href="#aboutus" class="  nav-link active" data-bs-toggle="tab">درباره ما </a></li>
       <li class="nav-itam"><a href="#travel" class="nav-link" data-bs-toggle="tab">پیگیری سفارش</a></li>
 

@@ -38,7 +38,26 @@
     </div>
   </div>
 </div>
+<div class="login_1">
+  <div class=" float-end m-1  d-inline-block"><a href="#"><img class="login_img"
+        src="{% static 'assets//img/instagram-logo-main-4.png' %}"></a></div>
+  <div class=" float-end m-1  d-inline-block"><a href="#"><img class="login_img"
+        src="{% static 'assets//img/مجموعه-لوگو-تلگرام-8.png' %}"></a></div>
+  <button class="btn-login border  d-inline-block float-end m-1"><a class="btn-login-a"
+      href={% url 'accounts:login' %}>ورود به سایت</a> </button>
+  <div class=" float-start m-1  d-inline-block"> <img class="logo" src="{% static 'assets//img/logoooo.png' %}"> </div>
+</div>
+<nav dir="rtl" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <div class=" float-end m-1  d-inline-block"><a href="#"><img class="part1_img" src="{% static 'assets//img/shop.png' %}"></a></div>
+  <div class="float-end m-1 d-inline-block "><a href="#"><img class="part1_img" src="{% static 'assets//img/profile2.png' %}"></a>
+  </div>
+</nav>
+<div>
+  <div class="part1 col-lg-12  ">
 
+    <h1 class="text-center ">گرافیست سایت </h1><br>
+    <p class="text-center  captiontitle">اولین و بزرکترین سایت طراحی گرافیکی </p>
+  </div>
 
 {% block 'content' %}
 
@@ -51,7 +70,7 @@
         <hr>
         <a class="link-dark text-decoration-none" href="#"> صفحه اصلی </a><br>
         <a class="link-dark text-decoration-none" href="#"> نمونه کار </a><br>
-        <a class="link-dark text-decoration-none" href="#"> خدمات </a><br>
+        <a class="link-dark text-decoration-none" href={% url 'root:service' %}> خدمات </a><br>
         <a class="link-dark text-decoration-none" href="#">همکاری با ما </a><br>
       </div>
       <div class="col-lg-3   d-inline-block">
@@ -88,3 +107,6 @@
 </body>
 
 </html>
+
+
+
