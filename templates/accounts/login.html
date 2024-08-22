@@ -21,7 +21,7 @@
         <div class="signin_signup">
           
           <!-- SIGN IN FORM -->
-          <form class="sign_in-form" method='post'>
+          <form  class="sign_in-form" method='post'>
             {% csrf_token %}
             <h2 class="title">ورود</h2>
             <div class="input_field">
@@ -53,22 +53,18 @@
           </form><!-- sign_in-form -->
 
           <!-- SIGN UP FORM -->
-          <form class="sign_up-form">
+          <form action='{% url 'accounts:signup' %}' method='post'  class="sign_up-form">
+            {% csrf_token %}
             <h2 class="title">ثبت نام</h2>
 
             <div class="input_field">
-              <i class="fa fa-user"></i>
-              <input type="text" placeholder="نام کاربری">
-            </div><!-- input_field -->
-
-            <div class="input_field">
               <i class="fa fa-envelope"></i>
-              <input type="text" placeholder="ایمیل">
+              <input type="text" name='email' placeholder="ایمیل">
             </div><!-- input_field -->
 
             <div class="input_field">
               <i class="fa fa-lock"></i>
-              <input type="password" placeholder="رمز عبور">
+              <input type="password" name='password' placeholder="رمز عبور">
             </div><!-- input_field -->
 
             <input type="submit" value="ثبت نام" class="btn solid">
@@ -100,7 +96,7 @@
           <div class="content">
             <h3>از قبل ثبت نام کرده اید؟</h3>
             <p>جهت ورود به سایت از طریق لینک زیر اقدام کنید</p>
-            <button id="sign_in-btn" class="btn transparent">ورود</button>
+            <button id="sign_in-btn" class="btn transparent" type='submit'>ورود</button>
           </div><!-- content -->
           <img src="{% static 'assets/P12-animated login and signup form/images/sing_in.svg' %}" class="image" alt="sign in image">
         </div><!-- panel right_panel -->

@@ -66,21 +66,21 @@ def signup_user(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            profile = Profile.objects.create(user=user)
-            profile.save()
+            # profile = Profile.objects.create(user=user)
+            # profile.save()
             login(request,user )
             messages.add_message(request , messages.SUCCESS , 'your account was created successfuly')
             return redirect('/')
         else:
             messages.add_message(request , messages.ERROR, 'your data is not valid')
-            return redirect('accounts:signup')
+            return redirect('accounts:login')
 
     else:
         form = RegisterForm()
         context = {
             'form' : form
             }
-        return render(request , 'accounts/signup.html' , context=context)
+        return render(request , 'accounts/login.html' , context=context)
 
 def change_password(request):
     if request.user.is_authenticated:
